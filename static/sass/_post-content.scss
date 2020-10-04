@@ -1,4 +1,7 @@
 .post-content {
+
+  @extend %fixed-width-container;
+
   table,
   blockquote,
   pre,

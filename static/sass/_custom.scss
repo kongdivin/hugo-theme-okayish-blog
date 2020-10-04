@@ -74,8 +74,7 @@ kbd {
 }
 
 .is-wrapper {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 !important;
 }
 
 .page-banner {
@@ -91,9 +90,31 @@ kbd {
   .row:first-child .col-12:first-child .p-card {
     margin-top: 1.5rem;
   }
+}
 
-  .p-card h3 a {
-    color: $color-dark;
+.posts--snazzy {
+  .row:first-child {
+    .col-12:first-child .p-card {
+      margin-top: 0;
+    }
+
+    .col-12:not(:first-child) .p-card {
+      padding-top: 0 !important;
+    }
+  }
+
+  .p-card {
+    @extend %section-padding--default;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    margin: 0;
+    overflow: visible;
+
+    .p-heading--3 a {
+      font-weight: $font-weight-bold;
+      color: $color-dark;
+    }
   }
 }
 
@@ -102,7 +123,7 @@ kbd {
   @extend .p-card;
 
   .card-header {
-    @extend .p-heading--three;
+    @extend .p-heading--3;
   }
 
   .card-body {
@@ -110,7 +131,7 @@ kbd {
   }
 }
 
-@media screen and (min-width: 772px) {
+@media (min-width: $breakpoint-medium) {
   .col--share-links {
     text-align: right;
   }
